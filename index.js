@@ -1,40 +1,28 @@
-function dwarfRollCall(name) {
-  var str = "";
-  for (let i = 0; i < name.length; i++) {
-    str += `${(i+1)}. ${name[i]} `
+
+
+function dwarfRollCall(array){
+  var names = "";
+  for(let i = 0; i < array.length; i++){
+    names += `${i+1}. ${array[i]} `;
   }
-  return str
+  return names;
 }
 
-function summonCaptainPlanet(planet){
-  var arr = [];
-  for (let i = 0; i < planet.length; i++){
-    arr.push(planet[i].toUpperCase() + "!")
+function summonCaptainPlanet(array){
+  for (let i = 0; i < array.length; i++){
+    array[i] = (array[i].toUpperCase() + "!");
   }
-  return arr
+  return array;
 }
 
-function longPlaneteerCalls(words) {
-  var empty = "";
-  for (let i = 0; i < words.length; i++){
-    empty = `${words[i]}`;
-    if (empty.length <= 4){
-      return false
-    } else {
-      return true
-    }
+function longPlaneteerCalls(array){
+  for (let i = 0; i < array.length; i++){
+    var element = `${array[i]}`;
+  }
+  if (element.length > 4){
+    return true;
+  } else { 
+    return false;
   }
 }
 
-function findTheCheese (foods) {
-  for (let i = 0; i < foods.length; i++){
-    if (foods[i] == "cheddar") {
-      return "cheddar";
-    } else if (foods[i] == "gouda"){
-      return "gouda";
-    } else if (foods[i] == "camembert"){
-      return "camembert";
-    }
-    }
-    return "no cheese!"
-  }
